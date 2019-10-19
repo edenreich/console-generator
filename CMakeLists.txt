@@ -7,6 +7,9 @@ project(console-generator
     DESCRIPTION "A code genrator for the console-component, it generate commands quickly, so you can be more productive and focus only on code."
 )
 
+# Support only from CPP-14 standards
+set (CMAKE_CXX_STANDARD 14)
+
 # Add The CPM Package Manager
 if(NOT EXISTS "${CMAKE_HOME_DIRECTORY}/cmake/CPM.cmake")
   file(DOWNLOAD https://raw.githubusercontent.com/TheLartians/CPM.cmake/master/cmake/CPM.cmake "${CMAKE_HOME_DIRECTORY}/cmake/CPM.cmake")
