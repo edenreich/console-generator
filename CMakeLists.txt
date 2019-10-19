@@ -7,8 +7,8 @@ project(console-generator
     DESCRIPTION "A code genrator for the console-component, it generate commands quickly, so you can be more productive and focus only on code."
 )
 
-# Support only from CPP-14 standards
-set(CMAKE_CXX_STANDARD 14)
+# Support only from CPP-17 standards
+set(CMAKE_CXX_STANDARD 17)
 
 # Set the parallel jobs
 set(CMAKE_BUILD_PARALLEL_LEVEL 4)
