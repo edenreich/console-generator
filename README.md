@@ -8,5 +8,5 @@ An helper / util for the console-component, this cli help to generate commands q
 
 ## Basic Usage
 
-Simply run `console make:command <command_name>`, the command has been generated in the commands directory.
+Simply run `console-cli make:command --name [command_name]`, check commands directory, you should have a new generated command.
 
