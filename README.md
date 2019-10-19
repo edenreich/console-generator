@@ -4,7 +4,7 @@
 
 # Console Component
 
-An helper / util for the console-component, this cli help to generate commands quickly.
+A code genrator for the console-component, it generate commands quickly, so you can be more productive and focus only on code.
 
 ## Basic Usage
 

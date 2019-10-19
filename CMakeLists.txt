@@ -1,10 +1,10 @@
 
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
-project(console-cli
+project(console-generator
     VERSION 1.0.0
     LANGUAGES CXX
-    DESCRIPTION "An helper / util for the console-component, this cli help to generate commands quickly."
+    DESCRIPTION "A code genrator for the console-component, it generate commands quickly, so you can be more productive and focus only on code."
 )
 
 # Add The CPM Package Manager

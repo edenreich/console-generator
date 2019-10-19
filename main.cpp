@@ -7,12 +7,12 @@ int main(int argc, char ** argv)
 {
     Console::Application app(argc, argv);
 
-    app.setApplicationName("Console CLI Helper");
-    app.setApplicationUsage("console-cli <command> [options]");
+    app.setApplicationName("Console Generator Helper");
+    app.setApplicationUsage("console-generator <command> [options]");
     app.setApplicationVersion("1.0.0");
     app.setAutoPrintHelp(true);
 
-    app.setApplicationDescription("An helper / util for the console-component, this cli help to generate commands quickly.");
+    app.setApplicationDescription("A code genrator for the console-component, it generate commands quickly, so you can be more productive and focus only on code.");
 
     app.addCommand(new MakeCommand);
 
