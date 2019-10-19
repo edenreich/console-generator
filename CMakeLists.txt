@@ -8,7 +8,10 @@ project(console-generator
 )
 
 # Support only from CPP-14 standards
-set (CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 14)
+
+# Set the parallel jobs
+set(CMAKE_BUILD_PARALLEL_LEVEL 4)
 
 # Add The CPM Package Manager
 if(NOT EXISTS "${CMAKE_HOME_DIRECTORY}/cmake/CPM.cmake")
