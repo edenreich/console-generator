@@ -44,4 +44,24 @@ public:
      */
     ExitCode handle(Interfaces::InputInterface * input, Interfaces::OutputInterface * output) override;
 
+private: 
+
+    /**
+     * Create out of uppercase class name
+     * a colon case name.
+     * 
+     * @param std::string name
+     * @return const std::string &
+     */
+    std::string makeColonCaseName(const std::string & name);
+
+    /**
+     * Create out of uppercase class name
+     * a snake case name.
+     * 
+     * @param std::string name
+     * @return const std::string &
+     */
+    std::string makeSnakeCaseName(const std::string & name);
+
 };
