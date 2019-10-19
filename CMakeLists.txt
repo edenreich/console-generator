@@ -24,7 +24,7 @@ CPMAddPackage(
 )
 
 # Move The Default Directory Of The Executable To bin Directory
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/dist)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/dist/bin)
 
 # Collect Implemention Files Of The Current Project
 set(SOURCES_CXX_FILES
