@@ -47,6 +47,11 @@ ExitCode MakeCommand::handle(Interfaces::InputInterface * input, Interfaces::Out
         return ExitCode::NeedHelp;
     }
 
+    // @todo write the implemention
+
+    // create a macro that contains a command strcture and one that contains a header structure that have placeholders (unique identifiers / tokens).
+    // perform search and replace on this tokens
+    // create a cpp file and header file in commands directory with the rendered output.
 
     return ExitCode::Ok;
 }
