@@ -1,7 +1,11 @@
 
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
-project(console-cli CXX)
+project(console-cli
+    VERSION 1.0.0
+    LANGUAGES CXX
+    DESCRIPTION "An helper / util for the console-component, this cli help to generate commands quickly."
+)
 
 # Add The CPM Package Manager
 if(NOT EXISTS "${CMAKE_HOME_DIRECTORY}/cmake/CPM.cmake")
