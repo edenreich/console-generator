@@ -44,6 +44,8 @@ std::string MakeCommand::getDescription()
 Types::AvailableOptions MakeCommand::getOptions()
 {
     Types::AvailableOptions options;
+    
+    options["-n"] = std::pair<std::string, std::string>("--name", "The command name");
 
     return options;
 }
@@ -66,6 +68,11 @@ ExitCode MakeCommand::handle(Interfaces::InputInterface * input, Interfaces::Out
     m_name = input->getOption("name");
     m_colonCaseName = makeColonCaseName(m_name);
     m_snakeCaseName = makeSnakeCaseName(m_name);
+
+    if (m_name.empty()) {
+        output->printCommandHelp(this);
+        return ExitCode::NeedHelp; 
+    }
 
     // Render the files output
     const std::string definitionFileString = getRenderedDefinitionFile();
