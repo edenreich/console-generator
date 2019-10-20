@@ -41,7 +41,7 @@ jobs:
           sudo cp -R /tmp/cmake*/share/cmake-3.15 /usr/local/share/cmake-3.15
 
       - name: configure
-        run: cd build && cmake .. -DCMAKE_BUILD_TYPE=Release
+        run: cd build && cmake ..
 
       - name: build
         run: cd build && cmake --build . --config Release
