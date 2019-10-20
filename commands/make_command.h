@@ -64,4 +64,39 @@ private:
      */
     std::string makeSnakeCaseName(const std::string & name);
 
+    /**
+     * Retrieve the rendered definition file.
+     *
+     * @return std::string
+     */
+    std::string getRenderedDefinitionFile();
+
+    /**
+     * Retrieve the rendered implemention file.
+     * 
+     * @return std::string
+     */
+    std::string getRenderedImplementionFile();
+
+    /**
+     * Store the name of the command.
+     * 
+     * @var std::string
+     */
+    std::string m_name;
+
+    /**
+     * Store the colon case name of the command.
+     * 
+     * @var std::string
+     */
+    std::string m_colonCaseName;
+
+    /**
+     * Store the snake case name of the command.
+     * 
+     * @var std::string
+     */
+    std::string m_snakeCaseName;
+
 };

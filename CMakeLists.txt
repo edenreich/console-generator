@@ -9,6 +9,8 @@ project(console-generator
 
 # Support only from CPP-17 standards
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Set the parallel jobs
 set(CMAKE_BUILD_PARALLEL_LEVEL 4)
@@ -45,4 +47,4 @@ add_executable(${PROJECT_NAME} ${SOURCES_CXX_FILES})
 include_directories(${CMAKE_BINARY_DIR}/dist/include)
 
 # Link The Executable With The Library
-target_link_libraries(${PROJECT_NAME} console)
+target_link_libraries(${PROJECT_NAME} console -lstdc++fs)
