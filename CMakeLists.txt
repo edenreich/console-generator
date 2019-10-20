@@ -7,6 +7,9 @@ project(console-generator
     DESCRIPTION "A code genrator for the console-component, it generate commands quickly, so you can be more productive and focus only on code."
 )
 
+# Link libraries statically
+set(BUILD_SHARED_LIBS OFF)
+
 # Support only from CPP-17 standards
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -37,6 +40,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/dist/bin)
 # Set All Required Libraries
 if(APPLE)
   set(FILESYSTEM_CXX -lc++fs)
+elseif(MSVC)
+  # This is not needed on windows
 else()
   set(FILESYSTEM_CXX -lstdc++fs)
 endif()
@@ -55,3 +60,4 @@ include_directories(${CMAKE_BINARY_DIR}/dist/include)
 
 # Link The Executable With The Library
 target_link_libraries(${PROJECT_NAME} console ${FILESYSTEM_CXX})
+
