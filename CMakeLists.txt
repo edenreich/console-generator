@@ -6,6 +6,9 @@ project(console-generator
     DESCRIPTION "A code genrator for the console-component, it generate commands quickly, so you can be more productive and focus only on code."
 )
 
+# Link libraries statically
+set(BUILD_SHARED_LIBS OFF)
+
 # Support only from CPP-17 standards
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
