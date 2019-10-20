@@ -34,6 +34,13 @@ CPMAddPackage(
 # Move The Default Directory Of The Executable To bin Directory
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/dist/bin)
 
+# Set All Required Libraries
+if(APPLE)
+  set(FILESYSTEM_CXX -lc++fs)
+else()
+  set(FILESYSTEM_CXX -lstdc++fs)
+endif()
+
 # Collect Implemention Files Of The Current Project
 set(SOURCES_CXX_FILES
     main.cpp
@@ -47,4 +54,4 @@ add_executable(${PROJECT_NAME} ${SOURCES_CXX_FILES})
 include_directories(${CMAKE_BINARY_DIR}/dist/include)
 
 # Link The Executable With The Library
-target_link_libraries(${PROJECT_NAME} console -lstdc++fs -lc++fs)
+target_link_libraries(${PROJECT_NAME} console ${FILESYSTEM_CXX})

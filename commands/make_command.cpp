@@ -2,18 +2,11 @@
 
 #include <iostream>
 #include <fstream>
-#ifdef __APPLE__
-#include <filesystem>
-#else
+
 #include <experimental/filesystem>
-#endif
 #include <ios>
 
-#ifdef __APPLE__
-namespace fs = std::filesystem;
-#else
 namespace fs = std::experimental::filesystem;
-#endif
 
 
 /**
