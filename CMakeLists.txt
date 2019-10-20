@@ -47,4 +47,4 @@ add_executable(${PROJECT_NAME} ${SOURCES_CXX_FILES})
 include_directories(${CMAKE_BINARY_DIR}/dist/include)
 
 # Link The Executable With The Library
-target_link_libraries(${PROJECT_NAME} console -lstdc++fs)
+target_link_libraries(${PROJECT_NAME} console -lstdc++fs -lc++fs)
