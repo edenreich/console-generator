@@ -2,14 +2,14 @@
 
 #include <iostream>
 #include <fstream>
-#ifdef __APPLE__
+#if defined(__APPLE__) || defined(_WIN32)
 #include <filesystem>
 #else
 #include <experimental/filesystem>
 #endif
 #include <ios>
 
-#ifdef __APPLE__
+#if defined(__APPLE__) || defined(_WIN32)
 namespace fs = std::filesystem;
 #else
 namespace fs = std::experimental::filesystem;
