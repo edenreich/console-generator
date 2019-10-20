@@ -32,8 +32,14 @@ jobs:
       # - name: debug5
       #   run: sw_vers
 
-        - name: debug6
-          run: sudo find /Library -name filesystem 
+      # - name: debug6
+      #   run: sudo find /Library -name filesystem
+
+      - name: debug7
+        run: |
+          which g++
+          g++ --version
+          ls -la /usr/local/include/c++
 
       # - uses: actions/checkout@master
 
