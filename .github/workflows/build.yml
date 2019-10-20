@@ -10,12 +10,13 @@ jobs:
     strategy:
       matrix:
         os:
-          # - ubuntu-latest
+          - ubuntu-latest
           # - macOS-latest
           - windows-latest
     runs-on: ${{matrix.os}}
     
     steps:
+      # @todo investigate why filesystem definition header does not exists on MacOS
       # - name: debug
       #   run: xcodebuild -version
       

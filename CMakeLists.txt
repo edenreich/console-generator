@@ -1,4 +1,3 @@
-
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
 project(console-generator
@@ -11,6 +10,9 @@ project(console-generator
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+
+# Link libraries statically
+set(BUILD_SHARED_LIBS OFF)
 
 # Set the parallel jobs
 set(CMAKE_BUILD_PARALLEL_LEVEL 4)
@@ -34,24 +36,4 @@ CPMAddPackage(
 # Move The Default Directory Of The Executable To bin Directory
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/dist/bin)
 
-# Set All Required Libraries
-if(APPLE)
-  set(FILESYSTEM_CXX -lc++fs)
-else()
-  set(FILESYSTEM_CXX -lstdc++fs)
-endif()
-
-# Collect Implemention Files Of The Current Project
-set(SOURCES_CXX_FILES
-    main.cpp
-    commands/make_command.cpp
-)
-
-# Add The Implemention Files To The Executable
-add_executable(${PROJECT_NAME} ${SOURCES_CXX_FILES})
-
-# Add The Definition Files
-include_directories(${CMAKE_BINARY_DIR}/dist/include)
-
-# Link The Executable With The Library
-target_link_libraries(${PROJECT_NAME} console ${FILESYSTEM_CXX})
+add_subdirectory(src)
