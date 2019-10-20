@@ -66,7 +66,7 @@ ExitCode MakeCommand::handle(Interfaces::InputInterface * input, Interfaces::Out
     fs::path path = fs::current_path();
 
     if (fs::exists(path.append("commands")) == false) {
-        std::cerr << "Commands directory does not exists!";
+        output->error("Commands directory does not exists!");
         // for now just treat it as an error, perhaps later I will create a directory
         return ExitCode::Error;
     }
