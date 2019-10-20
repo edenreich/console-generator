@@ -10,3 +10,8 @@ A code genrator for the console-component, it generate commands quickly, so you 
 
 Simply run `console-generator make:command --name [command_name]`, check commands directory, you should have a new generated command.
 
+## Build
+
+1. Run `cd build && cmake ..`
+
+2. Run `cmake --build . --config Release` 
