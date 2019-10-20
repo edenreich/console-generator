@@ -29,8 +29,11 @@ jobs:
       # - name: debug4
       #   run: ls -la /Library/Developer/CommandLineTools/usr/include/c++/v1/experimental
 
-      - name: debug5
-        run: sw_vers
+      # - name: debug5
+      #   run: sw_vers
+
+        - name: debug6
+          run: sudo find /Library -name filesystem 
 
       # - uses: actions/checkout@master
 
