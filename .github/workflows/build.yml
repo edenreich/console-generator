@@ -23,7 +23,7 @@ jobs:
         run: clang --version
 
       - name: debug3
-        run: ls -la /Library/Developer/CommandLineTools/usr/include/c++
+        run: ls -la /Library/Developer/CommandLineTools/usr/include/c++/v1
 
       # - uses: actions/checkout@master
 
