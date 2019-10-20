@@ -8,5 +8,5 @@ A code genrator for the console-component, it generate commands quickly, so you 
 
 ## Basic Usage
 
-Simply run `console-cli make:command --name [command_name]`, check commands directory, you should have a new generated command.
+Simply run `console-generator make:command --name [command_name]`, check commands directory, you should have a new generated command.
 
