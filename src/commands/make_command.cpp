@@ -98,7 +98,7 @@ ExitCode MakeCommand::handle(Interfaces::InputInterface * input, Interfaces::Out
     definitionFile.close();
     implementionFile.close();
 
-    output->info("Command %s successfully created in commands directory", m_name.c_str());
+    output->info("Command %s created successfully in commands directory", m_name.c_str());
 
     return ExitCode::Ok;
 }
