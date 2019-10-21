@@ -9,6 +9,8 @@ project(console-generator
 # Set All Required Filesystem Linking
 if(APPLE)
   set(FILESYSTEM_CXX -lc++fs)
+elseif(MSVC)
+  #
 else()
   set(FILESYSTEM_CXX -lstdc++fs)
 endif()
