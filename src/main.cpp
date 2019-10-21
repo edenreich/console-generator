@@ -12,7 +12,7 @@ int main(int argc, char ** argv)
     app.setApplicationVersion("1.0.0");
     app.setAutoPrintHelp(true);
 
-    app.setApplicationDescription("A code genrator for the console-component, it generate commands quickly, so you can be more productive and focus only on code.");
+    app.setApplicationDescription("The console util, it helps to generate commands.");
 
     app.addCommand(new MakeCommand);
 
